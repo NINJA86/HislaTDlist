@@ -15,7 +15,7 @@
     <main class="">
       <section class="flex items-center justify-center flex-col mt-20">
         <form
-          class="border-black-border border bg-sectionBg p-8 min-w-[810px] flex flex-col items-center rounded-default h-[9rem] overflow-hidden"
+          class="border-black-border border bg-sectionBg p-8 min-w-[810px] flex flex-col items-center rounded-default h-[9rem] overflow-hidden transition-all"
           id="form"
         >
           <div class="flex items-center w-full mb-4 ">
@@ -26,8 +26,10 @@
               id="todoNameInput"
             />
             <button
-              title="Add New"
+              title="open form"
+              onclick="event.preventDefault()"
               class="group cursor-pointer outline-none hover:rotate-90 duration-300"
+              id="openBtn"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -223,7 +225,13 @@
             <button class="cursor-pointer bg-transparent rounded-default px-8 border-black-border border py-1.5 hover:bg-subInput hover:text-gray-50 transition-colors ">Add task</button>
           </div>
         </form>
+
       </section>
+     <section class="flex items-center justify-center flex-col mt-20">
+      <div class="border-black-border border bg-sectionBg p-8 min-w-[810px] flex flex-col items-center justify-center rounded-default">
+        <h1>Here sholud be the todos</h1>
+      </div>
+     </section>
     </main>
 
 

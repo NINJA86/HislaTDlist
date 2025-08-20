@@ -31,6 +31,6 @@
 }
 @layer utilities {
   .active {
-    @apply h-auto overflow-auto;
+    @apply h-auto overflow-auto visible;
   }
 }
