@@ -9,10 +9,12 @@ function showingForm(): void {
   todoForm.classList.add("active");
   console.log("logged");
 }
-function closingForm(): void {
+function closingForm(event: Event): void {
+  event.preventDefault();
+  todoNameinput.value = "" as string;
   todoForm.classList.remove("active");
 }
 
 todoNameinput.addEventListener("click", showingForm);
 openTodoBtn.addEventListener("click", closingForm);
-closeTodoBtn.addEventListener("click", closingForm);
+closeTodoBtn.addEventListener("click", (event) => closingForm(event));

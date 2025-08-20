@@ -34,3 +34,19 @@
     @apply h-auto overflow-auto visible;
   }
 }
+@layer keyframes {
+  @keyframes checkAnim {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 10px;
+    }
+  }
+}
+
+@layer utilities {
+  .animate-checkAnim {
+    animation: checkAnim 0.2s forwards;
+  }
+}
