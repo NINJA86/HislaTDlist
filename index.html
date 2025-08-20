@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://sets.hugeicons.com/YOUR-SET-ID.css"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="h-screen bg-screenBg">
+    <main class="">
+      <section class="flex items-center justify-center flex-col mt-20">
+        <form
+          class="border-black-border border bg-sectionBg p-8 min-w-[810px] flex flex-col items-center rounded-default"
+        >
+          <div class="flex items-center w-full mb-4">
+            <input
+              type="text"
+              placeholder="Add a new task..."
+              class="w-full outline-0 text-2xl"
+            />
+            <button
+              title="Add New"
+              class="group cursor-pointer outline-none hover:rotate-90 duration-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="50px"
+                height="50px"
+                viewBox="0 0 24 24"
+                class="stroke-zinc-400 fill-none group-hover:fill-zinc-800 group-active:stroke-zinc-200 group-active:fill-zinc-600 group-active:duration-0 duration-300"
+              >
+                <path
+                  d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z"
+                  stroke-width="1.5"
+                ></path>
+                <path d="M8 12H16" stroke-width="1.5"></path>
+                <path d="M12 16V8" stroke-width="1.5"></path>
+              </svg>
+            </button>
+          </div>
+
+          <div class="w-full">
+            <div class="relative">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                color="#000000"
+                fill="none"
+                class="absolute mt-[9px] ml-3"
+              >
+                <path
+                  d="M14.9805 7.01556C14.9805 7.01556 15.4805 7.51556 15.9805 8.51556C15.9805 8.51556 17.5687 6.01556 18.9805 5.51556"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.99491 2.02134C7.49644 1.91556 5.56618 2.20338 5.56618 2.20338C4.34733 2.29053 2.01152 2.97385 2.01154 6.96454C2.01156 10.9213 1.9857 15.7993 2.01154 17.7439C2.01154 18.932 2.74716 21.7033 5.29332 21.8518C8.38816 22.0324 13.9628 22.0708 16.5205 21.8518C17.2052 21.8132 19.4847 21.2757 19.7732 18.7956C20.0721 16.2263 20.0126 14.4407 20.0126 14.0157"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M21.9999 7.01556C21.9999 9.77698 19.7592 12.0156 16.9951 12.0156C14.231 12.0156 11.9903 9.77698 11.9903 7.01556C11.9903 4.25414 14.231 2.01556 16.9951 2.01556C19.7592 2.01556 21.9999 4.25414 21.9999 7.01556Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M6.98053 13.0156H10.9805"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M6.98053 17.0156H14.9805"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <textarea
+                class="w-full px-3 py-4 pl-16 rounded-default border border-black-border bg-subInput"
+                name="description"
+                id="description"
+                placeholder="Add description (Optional)"
+                 cols="50"
+                 rows="3.5"
+                 
+              ></textarea>
+            </div>
+            <div class="w-full mt-6 space-y-4">
+              <div class="flex gap-4 my-15">
+                <!-- Category -->
+                <div class="relative flex flex-col flex-1">
+                  <label
+                    for="category"
+                    class="mb-1 text-sm font-medium text-gray-600 flex items-center gap-1"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-4 h-4 text-gray-500"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"
+                      />
+                    </svg>
+                    Category
+                  </label>
+                  <select
+                    id="category"
+                    class="input"
+                  >
+                    <option selected value="learning">Learning</option>
+                    <option value="personal">Personal</option>
+                    <option value="work">Work</option>
+                    <option value="health">Health</option>
+                  </select>
+                </div>
+
+                <!-- Priority -->
+                <div class="relative flex flex-col flex-1">
+                  <label
+                    for="priority"
+                    class="mb-1 text-sm font-medium text-gray-600 flex items-center gap-1"
+                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flag w-4 h-4 mr-2">
+                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                    <line x1="4" x2="4" y1="22" y2="15"></line>
+                  </svg>
+                    Priority
+                  </label>
+                  <select
+                    id="priority"
+                    class="input"
+                  >
+                    <option selected value="">Select priority</option>
+                    <option value="">High</option>
+                    <option value="">Medium</option>
+                    <option value="">Low</option>
+                  </select>
+                </div>
+
+                <!-- Date -->
+                <div class="relative flex flex-col flex-1">
+                  <label
+                    for="date"
+                    class="mb-1 text-sm font-medium text-gray-600 flex items-center gap-1"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="w-4 h-4 text-gray-500"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                    Date
+                  </label>
+                  <input
+                    type="date"
+                    id="date"
+                    class=" input"
+                  />
+                </div>
+              </div>
+
+              <!-- Tags -->
+              <div class="relative flex flex-col">
+                <label
+                  for="tags"
+                  class="mb-1 text-sm font-medium text-gray-600 flex items-center gap-1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-4 h-4 text-gray-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M7 7h.01M4 21h16a2 2 0 002-2V9a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                  Tags
+                </label>
+                <input
+                  id="tags"
+                  class="input"
+                  placeholder="Add tags..."
+                ></input>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-8 justify-end w-full mt-6">
+            <button class="cursor-pointer">Cancel</button>
+            <button class="cursor-pointer bg-transparent rounded-default px-8 border-black-border border py-1.5 hover:bg-subInput hover:text-gray-50 transition-colors ">Add task</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

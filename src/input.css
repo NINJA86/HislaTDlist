@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@theme {
+  --color-screenBg: rgb(3, 7, 18, 1);
+  --color-sectionBg: rgb(17, 24, 39, 1);
+  --color-black-border: #374151;
+  --color-lightColor: #93a3af;
+  --radius-default: 1rem; /* 6px */
+
+  --color-subInput: #1f2937;
+}
+@layer base {
+  html {
+    font-size: 62.5%; /* 1rem = 10px */
+  }
+  svg {
+    @apply text-gray-400;
+  }
+  body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--color-lightColor);
+  }
+}
+@layer components {
+  .input {
+    @apply w-full px-4 py-5 rounded-default border border-black-border bg-subInput outline-none h-[5rem];
+  }
+}
