@@ -18,7 +18,7 @@
           class="border-black-border border bg-sectionBg p-8 min-w-[810px] flex flex-col items-center rounded-default h-[9rem] overflow-hidden transition-all"
           id="form"
         >
-          <div class="flex items-center w-full mb-4 ">
+          <div class="flex items-center w-full mb-4">
             <input
               type="text"
               placeholder="Add a new task..."
@@ -97,9 +97,8 @@
                 name="description"
                 id="description"
                 placeholder="Add description (Optional)"
-                 cols="50"
-                 rows="3.5"
-                 
+                cols="50"
+                rows="5"
               ></textarea>
             </div>
             <div class="w-full mt-6 space-y-4">
@@ -108,11 +107,11 @@
                 <div class="relative flex flex-col flex-1">
                   <label
                     for="category"
-                    class="mb-1 text-sm font-medium text-gray-600 flex items-center gap-1"
+                    class="mb-1 text-[12px] font-medium text-gray-600 flex items-center gap-1"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="w-4 h-4 text-gray-500"
+                      class="size-8 text-gray-500"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -126,10 +125,7 @@
                     </svg>
                     Category
                   </label>
-                  <select
-                    id="category"
-                    class="input"
-                  >
+                  <select id="category" class="input">
                     <option selected value="learning">Learning</option>
                     <option value="personal">Personal</option>
                     <option value="work">Work</option>
@@ -141,19 +137,27 @@
                 <div class="relative flex flex-col flex-1">
                   <label
                     for="priority"
-                    class="mb-1 text-sm font-medium text-gray-600 flex items-center gap-1"
+                    class="mb-1 text-[12px] font-medium text-gray-600 flex items-center gap-1"
                   >
-                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flag w-4 h-4 mr-2">
-                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
-                    <line x1="4" x2="4" y1="22" y2="15"></line>
-                  </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="size-8 text-gray-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-flag w-4 h-4 mr-2"
+                    >
+                      <path
+                        d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"
+                      ></path>
+                      <line x1="4" x2="4" y1="22" y2="15"></line>
+                    </svg>
                     Priority
                   </label>
-                  <select
-                    id="priority"
-                    class="input"
-                  >
-                    <option selected value="">Select priority</option>
+                  <select id="priority" class="input">
                     <option value="">High</option>
                     <option value="">Medium</option>
                     <option value="">Low</option>
@@ -164,11 +168,11 @@
                 <div class="relative flex flex-col flex-1">
                   <label
                     for="date"
-                    class="mb-1 text-sm font-medium text-gray-600 flex items-center gap-1"
+                    class="mb-1 text-[12px] font-medium text-gray-600 flex items-center gap-1"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="w-4 h-4 text-gray-500"
+                      class="size-8 text-gray-500"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -182,11 +186,7 @@
                     </svg>
                     Date
                   </label>
-                  <input
-                    type="date"
-                    id="date"
-                    class=" input"
-                  />
+                  <input type="date" id="date" class="input" />
                 </div>
               </div>
 
@@ -194,11 +194,11 @@
               <div class="relative flex flex-col">
                 <label
                   for="tags"
-                  class="mb-1 text-sm font-medium text-gray-600 flex items-center gap-1"
+                  class="mb-1 text-[12px] font-medium text-gray-600 flex items-center gap-1"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="w-4 h-4 text-gray-500"
+                    class="size-8 text-gray-500"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -212,61 +212,120 @@
                   </svg>
                   Tags
                 </label>
-                <input
-                  id="tags"
-                  class="input"
-                  placeholder="Add tags..."
-                ></input>
+                <input id="tags" class="input" placeholder="Add tags..." />
               </div>
             </div>
           </div>
           <div class="flex items-center gap-8 justify-end w-full mt-6">
             <button id="cancelBtn" class="cursor-pointer">Cancel</button>
-            <button class="cursor-pointer bg-transparent rounded-default px-8 border-black-border border py-1.5 hover:bg-subInput hover:text-gray-50 transition-colors ">Add task</button>
+            <button
+              class="cursor-pointer bg-transparent rounded-default px-8 border-black-border border py-1.5 hover:bg-subInput hover:text-gray-50 transition-colors"
+            >
+              Add task
+            </button>
           </div>
         </form>
-
       </section>
-     <section class="flex items-center justify-center flex-col mt-20">
-      <div class="border-black-border border bg-sectionBg p-10 min-w-[810px] flex flex-col items-center justify-center rounded-default">
-        <div class="flex flex-col items-center " id="noTask">
-       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#93a3af" height="50" width="50" version="1.1" id="Capa_1" viewBox="0 0 470.767 470.767" xml:space="preserve">
-<g>
-	<path d="M362.965,21.384H289.62L286.638,7.99C285.614,3.323,281.467,0,276.685,0h-82.618c-4.782,0-8.913,3.323-9.953,7.99   l-2.967,13.394h-73.36c-26.835,0-48.654,21.827-48.654,48.662v352.06c0,26.835,21.819,48.662,48.654,48.662h255.179   c26.835,0,48.67-21.827,48.67-48.662V70.046C411.635,43.211,389.8,21.384,362.965,21.384z M379.831,422.105   c0,9.295-7.563,16.858-16.866,16.858H107.786c-9.287,0-16.85-7.563-16.85-16.858V70.046c0-9.295,7.563-16.857,16.85-16.857h66.294   l-1.692,7.609c-0.684,3.02,0.062,6.188,1.988,8.596c1.94,2.415,4.876,3.82,7.965,3.82h106.082c3.091,0,6.026-1.405,7.951-3.82   c1.942-2.415,2.687-5.575,2.004-8.596l-1.692-7.609h66.279c9.303,0,16.866,7.563,16.866,16.857V422.105z"/>
-	<path d="M170.835,188.426h43.249l-10.279-7.019c-14.506-9.899-18.232-29.693-8.325-44.197c9.893-14.489,29.693-18.239,44.197-8.324   l1.694,1.157v-12.136c0-7.866-6.383-14.248-14.242-14.248h-56.294c-7.857,0-14.24,6.383-14.24,14.248v56.271   C156.595,182.045,162.978,188.426,170.835,188.426z"/>
-	<path d="M303.256,110.313l-49.85,47.194l-22.704-15.49c-7.221-4.962-17.13-3.083-22.099,4.162   c-4.954,7.251-3.09,17.144,4.178,22.098l33.28,22.727c2.718,1.864,5.839,2.772,8.961,2.772c3.96,0,7.888-1.474,10.933-4.356   l59.167-56.014c6.382-6.033,6.645-16.104,0.62-22.479C319.686,104.552,309.637,104.28,303.256,110.313z"/>
-	<path d="M170.835,297.669H214.1l-10.295-7.027c-14.506-9.901-18.232-29.693-8.325-44.197c9.893-14.498,29.693-18.248,44.197-8.325   l1.694,1.158v-12.136c0-7.865-6.383-14.248-14.242-14.248h-56.294c-7.857,0-14.24,6.383-14.24,14.248v56.279   C156.595,291.286,162.978,297.669,170.835,297.669z"/>
-	<path d="M303.256,219.555l-49.85,47.186l-22.704-15.49c-7.221-4.97-17.13-3.098-22.099,4.162   c-4.954,7.253-3.09,17.144,4.178,22.099l33.28,22.727c2.718,1.864,5.839,2.772,8.961,2.772c3.96,0,7.888-1.476,10.933-4.356   l59.167-56.007c6.382-6.033,6.645-16.096,0.62-22.479C319.686,213.793,309.637,213.529,303.256,219.555z"/>
-	<path d="M227.129,322.135h-56.294c-7.857,0-14.24,6.383-14.24,14.248v56.271c0,7.865,6.383,14.248,14.24,14.248h56.294   c7.859,0,14.242-6.383,14.242-14.248v-56.271C241.371,328.518,234.988,322.135,227.129,322.135z"/>
-</g>
-        </svg>
-        <h1 class="text-white mt-3">No Tasks To do</h1> 
-        <p class="text-gray-500 my-7 max-w-[21rem] text-center">Click the button above to add a new task.</p>
-        <ul class="flex gap-6">
-          <li class="flex items-center gap-2.5">
-          <svg class="size-7" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle w-4 h-4"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
-          <span>Organize tasks
-</span>
-        </li>
-      <li class="flex items-center gap-2.5">
-          <svg class="size-7" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle w-4 h-4"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
-          <span>Set priorities
+      <section class="flex items-center justify-center flex-col mt-20">
+        <div
+          class="border-black-border border bg-sectionBg p-10 min-w-[810px] flex flex-col items-center justify-center rounded-default"
+        >
+          <div class="flex flex-col items-center" id="noTask">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              fill="#93a3af"
+              height="50"
+              width="50"
+              version="1.1"
+              id="Capa_1"
+              viewBox="0 0 470.767 470.767"
+              xml:space="preserve"
+            >
+              <g>
+                <path
+                  d="M362.965,21.384H289.62L286.638,7.99C285.614,3.323,281.467,0,276.685,0h-82.618c-4.782,0-8.913,3.323-9.953,7.99   l-2.967,13.394h-73.36c-26.835,0-48.654,21.827-48.654,48.662v352.06c0,26.835,21.819,48.662,48.654,48.662h255.179   c26.835,0,48.67-21.827,48.67-48.662V70.046C411.635,43.211,389.8,21.384,362.965,21.384z M379.831,422.105   c0,9.295-7.563,16.858-16.866,16.858H107.786c-9.287,0-16.85-7.563-16.85-16.858V70.046c0-9.295,7.563-16.857,16.85-16.857h66.294   l-1.692,7.609c-0.684,3.02,0.062,6.188,1.988,8.596c1.94,2.415,4.876,3.82,7.965,3.82h106.082c3.091,0,6.026-1.405,7.951-3.82   c1.942-2.415,2.687-5.575,2.004-8.596l-1.692-7.609h66.279c9.303,0,16.866,7.563,16.866,16.857V422.105z"
+                />
+                <path
+                  d="M170.835,188.426h43.249l-10.279-7.019c-14.506-9.899-18.232-29.693-8.325-44.197c9.893-14.489,29.693-18.239,44.197-8.324   l1.694,1.157v-12.136c0-7.866-6.383-14.248-14.242-14.248h-56.294c-7.857,0-14.24,6.383-14.24,14.248v56.271   C156.595,182.045,162.978,188.426,170.835,188.426z"
+                />
+                <path
+                  d="M303.256,110.313l-49.85,47.194l-22.704-15.49c-7.221-4.962-17.13-3.083-22.099,4.162   c-4.954,7.251-3.09,17.144,4.178,22.098l33.28,22.727c2.718,1.864,5.839,2.772,8.961,2.772c3.96,0,7.888-1.474,10.933-4.356   l59.167-56.014c6.382-6.033,6.645-16.104,0.62-22.479C319.686,104.552,309.637,104.28,303.256,110.313z"
+                />
+                <path
+                  d="M170.835,297.669H214.1l-10.295-7.027c-14.506-9.901-18.232-29.693-8.325-44.197c9.893-14.498,29.693-18.248,44.197-8.325   l1.694,1.158v-12.136c0-7.865-6.383-14.248-14.242-14.248h-56.294c-7.857,0-14.24,6.383-14.24,14.248v56.279   C156.595,291.286,162.978,297.669,170.835,297.669z"
+                />
+                <path
+                  d="M303.256,219.555l-49.85,47.186l-22.704-15.49c-7.221-4.97-17.13-3.098-22.099,4.162   c-4.954,7.253-3.09,17.144,4.178,22.099l33.28,22.727c2.718,1.864,5.839,2.772,8.961,2.772c3.96,0,7.888-1.476,10.933-4.356   l59.167-56.007c6.382-6.033,6.645-16.096,0.62-22.479C319.686,213.793,309.637,213.529,303.256,219.555z"
+                />
+                <path
+                  d="M227.129,322.135h-56.294c-7.857,0-14.24,6.383-14.24,14.248v56.271c0,7.865,6.383,14.248,14.24,14.248h56.294   c7.859,0,14.242-6.383,14.242-14.248v-56.271C241.371,328.518,234.988,322.135,227.129,322.135z"
+                />
+              </g>
+            </svg>
+            <h1 class="text-white mt-3">No Tasks To do</h1>
+            <p class="text-gray-500 my-7 max-w-[21rem] text-center">
+              Click the button above to add a new task.
+            </p>
+            <ul class="flex gap-6">
+              <li class="flex items-center gap-2.5">
+                <svg
+                  class="size-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-check-circle w-4 h-4"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <path d="m9 11 3 3L22 4"></path>
+                </svg>
+                <span>Organize tasks </span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg
+                  class="size-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-check-circle w-4 h-4"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <path d="m9 11 3 3L22 4"></path>
+                </svg>
+                <span>Set priorities </span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <svg
+                  class="size-7"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-check-circle w-4 h-4"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <path d="m9 11 3 3L22 4"></path>
+                </svg>
+                <span>Track progress </span>
+              </li>
+            </ul>
+          </div>
+          <!-- tasks goes here -->
+          <div class="">
+            <!-- a todo component -->
 
-</span>
-        </li>
-      <li class="flex items-center gap-2.5">
-          <svg class="size-7" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-circle w-4 h-4"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg>
-          <span>Track progress
-
-</span>
-        </li></ul>
-        </div>
-        <!-- tasks goes here -->
-        <div class="">
-
-          <!-- a todo component --> 
-           
-          <!-- <div class="bg-subInput border bordesr-black-border min-w-[74rem] px-[7rem] py-[3rem]">
+            <!-- <div class="bg-subInput border bordesr-black-border min-w-[74rem] px-[7rem] py-[3rem]">
   <div class="flex items-center justify-between">
     <div class="flex gap-[7px] items-center">
       <label class="relative inline-block pl-9 mb-1 cursor-pointer text-base select-none mt-[-1.2rem] -ml-12">
@@ -306,17 +365,10 @@
     </div>
   </div>
   </div> -->
+          </div>
         </div>
-      </div>
-      
-
-
-     </section>
-    
-    
+      </section>
     </main>
-
-
 
     <script src="/dist/todolist.js"></script>
   </body>
