@@ -100,8 +100,7 @@ function appendTodo() {
               <div class="flex items-center gap-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="40"
-                  height="40"
+                  class="size-7"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -125,8 +124,7 @@ function appendTodo() {
               <div class="flex items-center gap-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  class="size-7"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -145,8 +143,7 @@ function appendTodo() {
               <div class="flex items-center gap-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  class="size-7"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
