@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Todo App</title>
     <link
       rel="stylesheet"
       href="https://sets.hugeicons.com/YOUR-SET-ID.css"
@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="output.css" />
   </head>
   <body class="h-screen bg-screenBg">
-    <main class="">
+    <main>
+      <!-- Form Section -->
       <section class="flex items-center justify-center flex-col mt-20">
         <form
           class="border-black-border border bg-sectionBg p-8 min-w-[810px] flex flex-col items-center rounded-default h-[9rem] overflow-hidden transition-all"
@@ -35,8 +36,8 @@
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="50px"
-                height="50px"
+                width="50"
+                height="50"
                 viewBox="0 0 24 24"
                 class="stroke-zinc-400 fill-none group-hover:fill-zinc-800 group-active:stroke-zinc-200 group-active:fill-zinc-600 group-active:duration-0 duration-300"
               >
@@ -151,7 +152,6 @@
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                      class="lucide lucide-flag w-4 h-4 mr-2"
                     >
                       <path
                         d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"
@@ -240,6 +240,8 @@
           </div>
         </form>
       </section>
+
+      <!-- List Section -->
       <section class="flex items-center justify-center flex-col mt-20">
         <div
           class="border-black-border border bg-sectionBg p-10 min-w-[810px] flex flex-col items-center justify-center rounded-default"
@@ -248,14 +250,10 @@
           <div class="flex flex-col items-center" id="noTask">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
               fill="#93a3af"
               height="50"
               width="50"
-              version="1.1"
-              id="Capa_1"
               viewBox="0 0 470.767 470.767"
-              xml:space="preserve"
             >
               <g>
                 <path
@@ -293,7 +291,6 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-check-circle w-4 h-4"
                 >
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                   <path d="m9 11 3 3L22 4"></path>
@@ -310,7 +307,6 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-check-circle w-4 h-4"
                 >
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                   <path d="m9 11 3 3L22 4"></path>
@@ -327,7 +323,6 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-check-circle w-4 h-4"
                 >
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                   <path d="m9 11 3 3L22 4"></path>
@@ -336,16 +331,26 @@
               </li>
             </ul>
           </div>
+
           <!-- tasks goes here -->
           <h1 class="text-center font-bold" id="taskContainerTitle">
             ready to complete
           </h1>
-          <div class="" id="todoContainer">
-            <!-- a todo component -->
-          </div>
+          <div id="todoContainer"></div>
         </div>
       </section>
     </main>
+
+    <!-- Toast -->
+    <div
+      id="toast"
+      role="status"
+      aria-live="polite"
+      class="fixed top-6 left-1/2 -translate-x-1/2 z-50 hidden opacity-0 -translate-y-2 transition-all duration-300 rounded-default border border-black-border bg-sectionBg px-4 py-2 text-sm shadow-md min-w-[260px] text-center"
+    >
+      <span id="toastIcon" class="mr-2 inline-block text-xl">✅</span>
+      <span id="toastMsg" class="text-xl">A todo added</span>
+    </div>
 
     <script src="/dist/todolist.js"></script>
   </body>

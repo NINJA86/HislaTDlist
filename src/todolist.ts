@@ -61,8 +61,12 @@ function addTodo(event: Event): void {
   event.preventDefault();
 
   if (!todoNameinput.value || todoNameinput.value.length < 3) {
+    showToast("Something went wrong!", "error");
+
     return;
   }
+  showToast("Task added successfully!", "success");
+
   const todo: Todo = {
     id: todosArray.length,
     title: todoNameinput.value,
@@ -205,3 +209,59 @@ openTodoBtn.addEventListener("click", closingForm);
 closeTodoBtn.addEventListener("click", (event) => closingForm(event));
 addTaskBtn.addEventListener("click", (event) => addTodo(event));
 window.addEventListener("load", checkHasTodo);
+
+// ===== Toast System ===== Powered by Ai (my friend)
+
+const toast = $.querySelector("#toast") as HTMLDivElement;
+const toastMsg = $.querySelector("#toastMsg") as HTMLSpanElement;
+const toastIcon = $.querySelector("#toastIcon") as HTMLSpanElement;
+
+let toastTimer: number | null = null;
+
+function showToast(
+  message: string,
+  type: "success" | "error" | "info" = "success",
+  duration = 2000
+): void {
+  // متن
+  toastMsg.textContent = message;
+
+  // آیکن و رنگ
+  if (type === "success") {
+    toastIcon.textContent = "✅";
+    toast.classList.remove("border-red-400");
+    toast.classList.add("border-green-400");
+  } else if (type === "error") {
+    toastIcon.textContent = "❌";
+    toast.classList.remove("border-green-400");
+    toast.classList.add("border-red-400");
+  } else {
+    toastIcon.textContent = "ℹ️";
+    toast.classList.remove("border-green-400", "border-red-400");
+  }
+
+  // اگه قبلاً تایمر باز بوده، پاکش کن
+  if (toastTimer) {
+    window.clearTimeout(toastTimer);
+    toastTimer = null;
+  }
+
+  // نمایش با انیمیشن
+  toast.classList.remove("hidden");
+  requestAnimationFrame(() => {
+    toast.classList.remove("opacity-0");
+    toast.classList.remove("translate-y-[-8px]");
+  });
+
+  // بستن خودکار
+  toastTimer = window.setTimeout(hideToast, duration);
+}
+
+function hideToast(): void {
+  toast.classList.add("opacity-0");
+  toast.classList.add("translate-y-[-8px]");
+  setTimeout(() => {
+    toast.classList.add("hidden");
+  }, 300);
+}
+// ===== End Toast System =====
