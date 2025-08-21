@@ -6,10 +6,19 @@ const closeTodoBtn = $.querySelector("#cancelBtn") as HTMLButtonElement;
 const openTodoBtn = $.querySelector("#openBtn") as HTMLButtonElement;
 // use whenever we didn't have task
 const noTaskContainer = $.querySelector("#noTask") as HTMLDivElement;
-
+const taskContainerTitle = $.querySelector(
+  "#taskContainerTitle"
+) as HTMLTitleElement;
 const addTaskBtn = $.querySelector("#addTaskBtn") as HTMLButtonElement;
 const todoWrapper = $.querySelector("#todoContainer") as HTMLDivElement;
+const noTaskAvailableContent = $.querySelector("#noTask") as HTMLDivElement;
+// inputs
+const category = $.querySelector("#category") as HTMLSelectElement;
+const priority = $.querySelector("#priority") as HTMLSelectElement;
+const date = $.querySelector("#date") as HTMLInputElement;
+const description = $.querySelector("#description") as HTMLTextAreaElement;
 
+//  array(todos)
 let todosArray: Todo[] = [];
 /*
 
@@ -30,6 +39,7 @@ let todosArray: Todo[] = [];
 // console.log(`تا ${targetDate.toDateString()} ${diffDays} روز مونده`);
 
 interface Todo {
+  id: number;
   title: string;
   category: string;
   priority: string;
@@ -45,15 +55,16 @@ function closingForm(event: Event): void {
   event.preventDefault();
   todoNameinput.value = "" as string;
   todoForm.classList.remove("active");
+  clearInput();
 }
-function addTodo(event: Event) {
-  const category = $.querySelector("#category") as HTMLSelectElement;
-  const priority = $.querySelector("#priority") as HTMLSelectElement;
-  const date = $.querySelector("#date") as HTMLInputElement;
-  const description = $.querySelector("#description") as HTMLTextAreaElement;
-
+function addTodo(event: Event): void {
   event.preventDefault();
+
+  if (!todoNameinput.value || todoNameinput.value.length < 3) {
+    return;
+  }
   const todo: Todo = {
+    id: todosArray.length,
     title: todoNameinput.value,
     category: category.value,
     date: date.value ? date.value : new Date().toLocaleDateString("en-CA"),
@@ -61,9 +72,11 @@ function addTodo(event: Event) {
     description: description.value,
   };
   todosArray.push(todo);
+  checkHasTodo();
   appendTodo();
+  clearInput();
 }
-function appendTodo() {
+function appendTodo(): void {
   let taskComponent: string = `` as string;
   todoWrapper.innerHTML = "";
   todosArray.forEach((item: Todo) => {
@@ -77,7 +90,6 @@ function appendTodo() {
                 >
                   <input
                     type="checkbox"
-                    checked
                     class="peer absolute opacity-0 h-0 w-0 cursor-pointer"
                   />
                   <span
@@ -89,6 +101,7 @@ function appendTodo() {
               </div>
               <button
                 class="rounded-default bg-red-400 py-3 px-6 cursor-pointer text-white transition-colors hover:bg-red-700 border border-black-border"
+                onclick="deleteTodo(${item.id})"
               >
                 Delete
               </button>
@@ -165,8 +178,30 @@ function appendTodo() {
   });
   todoWrapper.insertAdjacentHTML("beforeend", taskComponent);
 }
+function clearInput(): void {
+  description.value = "";
+  todoNameinput.value = "";
+}
+function deleteTodo(todoId): void {
+  todosArray = todosArray.filter((todo: Todo) => todo.id !== todoId);
+
+  checkHasTodo();
+  appendTodo();
+}
+function checkHasTodo(): void {
+  if (todosArray.length === 0) {
+    noTaskAvailableContent.classList.remove("hidden");
+    todoWrapper.classList.add("hidden");
+    taskContainerTitle.classList.add("hidden");
+  } else {
+    noTaskAvailableContent.classList.add("hidden");
+    todoWrapper.classList.remove("hidden");
+    taskContainerTitle.classList.remove("hidden");
+  }
+}
 
 todoNameinput.addEventListener("click", showingForm);
 openTodoBtn.addEventListener("click", closingForm);
 closeTodoBtn.addEventListener("click", (event) => closingForm(event));
 addTaskBtn.addEventListener("click", (event) => addTodo(event));
+window.addEventListener("load", checkHasTodo);
