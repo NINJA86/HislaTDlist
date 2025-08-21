@@ -11,6 +11,13 @@ const addTaskBtn = $.querySelector("#addTaskBtn") as HTMLButtonElement;
 
 let taskComponent: string = `` as string;
 
+// interface Todo {
+//   title:
+// }
+
+
+
+
 function showingForm(): void {
   todoForm.classList.add("active");
   console.log("logged");
@@ -20,7 +27,12 @@ function closingForm(event: Event): void {
   todoNameinput.value = "" as string;
   todoForm.classList.remove("active");
 }
-function addTodo(event: Event) {}
+function addTodo(event: Event) {
+  console.log();
+  console.log(event);
+  
+  
+}
 todoNameinput.addEventListener("click", showingForm);
 openTodoBtn.addEventListener("click", closingForm);
 closeTodoBtn.addEventListener("click", (event) => closingForm(event));
