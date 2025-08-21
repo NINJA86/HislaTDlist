@@ -24,6 +24,8 @@
               placeholder="Add a new task..."
               class="w-full outline-0 text-2xl"
               id="todoNameInput"
+              autocomplete="off"
+              required
             />
             <button
               title="open form"
@@ -99,6 +101,7 @@
                 placeholder="Add description (Optional)"
                 cols="50"
                 rows="5"
+                autocomplete="off"
               ></textarea>
             </div>
             <div class="w-full mt-6 space-y-4">
@@ -125,7 +128,7 @@
                     </svg>
                     Category
                   </label>
-                  <select id="category" class="input">
+                  <select autocomplete="off" id="category" class="input">
                     <option selected value="learning">Learning</option>
                     <option value="personal">Personal</option>
                     <option value="work">Work</option>
@@ -157,7 +160,7 @@
                     </svg>
                     Priority
                   </label>
-                  <select id="priority" class="input">
+                  <select id="priority" autocomplete="off" class="input">
                     <option value="high">High</option>
                     <option value="medium">Medium</option>
                     <option value="low">Low</option>
@@ -186,7 +189,12 @@
                     </svg>
                     Date
                   </label>
-                  <input type="date" id="date" class="input" />
+                  <input
+                    type="date"
+                    autocomplete="off"
+                    id="date"
+                    class="input"
+                  />
                 </div>
               </div>
 
@@ -212,7 +220,12 @@
                   </svg>
                   Tags
                 </label>
-                <input id="tags" class="input" placeholder="Add tags..." />
+                <input
+                  autocomplete="off"
+                  id="tags"
+                  class="input"
+                  placeholder="Add tags..."
+                />
               </div>
             </div>
           </div>
