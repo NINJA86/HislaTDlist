@@ -28,7 +28,7 @@ Thumbs.db
 .idea/
 *.swp
 
-# Optional: lock files (اگه نمی‌خوای توی گیت باشن)
+# Optional: lock files 
 # package-lock.json
 # yarn.lock
 # pnpm-lock.yaml
