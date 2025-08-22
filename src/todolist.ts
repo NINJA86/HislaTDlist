@@ -104,9 +104,14 @@ function appendTodo(): void {
           data-id="${item.id}"
           ${item.status ? "checked" : ""}
         />
-        <span
-          class="absolute top-0 left-0 h-6 w-6 bg-gray-200 rounded transition-all duration-300 shadow-md peer-checked:bg-green-400 peer-checked:shadow-lg peer-checked:shadow-secbg-green-400 after:content-[''] after:absolute after:left-2 after:top-0.5 after:w-2 after:h-3.5 after:border-white after:border-r-2 after:border-b-2 after:rotate-45 after:opacity-0 after:transition-opacity peer-checked:after:opacity-100"
-        ></span>
+<span
+  class="absolute top-0 left-0 h-6 w-6 border rounded transition-all duration-300 shadow-md 
+    border-red-400 peer-checked:border-green-400 
+    peer-checked:bg-green-400 peer-checked:shadow-lg peer-checked:shadow-secbg-green-400
+    after:content-[''] after:absolute after:left-2 after:top-0.5 after:w-2 after:h-3.5 after:border-white after:border-r-2 after:border-b-2 after:rotate-45 after:opacity-0 after:transition-opacity 
+    peer-checked:after:opacity-100"
+></span>
+
       </label>
       <h3
         class="font-bold text-3xl ${
