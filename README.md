@@ -16,7 +16,8 @@ especially whose job is involved with compony and etc.
 #  How To Use
 1.go to the Project's Folder
 ```bash
-cd HislaTDlist```
+cd HislaTDlist
+```
 
 2.install Dependencies
 ```bash
@@ -30,7 +31,9 @@ npm run build
 ```bash
 npm run tailwind
 ```
+# End of the story
 
 in close future, furthor feature may add to this project.
 
 <span style="font-weight:bold;">Who Knows 🤷‍♂️</span>
+
