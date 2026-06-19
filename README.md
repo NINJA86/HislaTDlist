@@ -7,9 +7,9 @@ especially whose job is involved with compony and etc.
 
 🟢 Built with ![Built with: TS](https://img.shields.io/badge/TypeScript-🟦-informational)  ![Built with: HTML](https://img.shields.io/badge/HTML-🟧-orange)  ![Built with: Tailwind](https://img.shields.io/badge/TailwindCSS-🌀-blue) <br/>
 
-🟡 search your Tasks (it hasn't added yet)<br/>
+🟡 search your Tasks (not yet)<br/>
 
-🟠 priorities your Tasks (it hasn't added yet) <br/>
+🟠 priorities your Tasks (not yet) <br/>
 
 🔴 how many days has remain for doing your task and deadlines ((it hasn't added yet) <br />
 
